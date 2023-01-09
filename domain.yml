@@ -1,0 +1,71 @@
+version: '3.1'
+intents:
+- affirm
+- bot_challenge
+- deny
+- goodbye
+- greet
+- mood_great
+- mood_unhappy
+- add_event
+- get_event
+# - inform_event_name
+# - inform_time
+
+entities:
+- event
+- time
+
+slots:
+  event:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: event
+      intent: add_event
+      # conditions:
+      # - active_loop: restaurant_form
+      #   requested_slot: event
+  time:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: time
+      intent: add_event
+      # conditions:
+      # - active_loop: restaurant_form
+      #   requested_slot: time
+
+forms:
+  event_form:
+    required_slots:
+    - event
+    - time
+
+actions: 
+  - action_hello_world
+  - action_add_event
+  - action_get_event
+
+responses:
+  utter_ask_restaurant_form_event:
+  - text: What do you want to do?
+  utter_ask_restaurant_form_time:
+  - text: At what time?
+
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
