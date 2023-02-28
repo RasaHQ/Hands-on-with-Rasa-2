@@ -83,35 +83,35 @@ nlu:
     - am I talking to a bot?
     - am I talking to a human?
 
+# - intent: add_event
+#   examples: |
+#     - Add Event
+#     - add event to [dance](event) at [23/09/22 10:00:00](time)
+#     - remind me to [take a bath](event) at [25/09/22 10:00:00](time)
+#     - remind me to [go for jogging](event) at [25/09/22 10:00:00](time)
+#     - remind me to [finish homework](event) at [25/09/22 10:00:00](time)
+#     - set reminder to [water the plants](event) at [25/09/22 10:00:00](time)
+#     - remind me to [send proposal](event) at [25/09/22 10:00:00](time)
+#     - remind me to [finish visa work](event) at [25/09/22 10:00:00](time)
+
 - intent: add_event
   examples: |
     - Add Event
-    - add event to [dance](event) at [23/09/22 10:00:00](time)
-    - remind me to [take a bath](event) at [25/09/22 10:00:00](time)
-    - remind me to [go for jogging](event) at [25/09/22 10:00:00](time)
-    - remind me to [finish homework](event) at [25/09/22 10:00:00](time)
-    - set reminder to [water the plants](event) at [25/09/22 10:00:00](time)
-    - remind me to [send proposal](event) at [25/09/22 10:00:00](time)
-    - remind me to [finish visa work](event) at [25/09/22 10:00:00](time)
-    - 
 
 - intent: get_event
   examples: |
     - Get Event
     - what is on my calendar
 
-# - intent: inform_event
-#   examples: |
-#     - i want to [dance](event)
-#     - [cook food](event)
-#     - [attend meeting](event)
-#     - [dispose garbage](event)
+- intent: inform_event
+  examples: |
+    - go for swimming
+    - play games
 
 
-# - intent: inform_time
-#   examples: |
-#     - at [2am](time)
-#     - at [3 PM](time)
-#     - at [4](time) o clock 
+- intent: inform_time
+  examples: |
+    - 25/09/22 10:00:00
+
 
 
